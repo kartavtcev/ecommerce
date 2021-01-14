@@ -21,22 +21,13 @@ public class EcommerceApplication {
 	@Bean
 	CommandLineRunner runner(ProductService productService) {
 		return args -> {
-			productService.save(new Product(1L, "Test product", 10.4, "https://via.placeholder.com/200x100"));
-			// more products
+			productService.save(new Product(1L, "TV Set", 300.00, "http://placehold.it/200x100"));
+			productService.save(new Product(2L, "Game Console", 200.00, "http://placehold.it/200x100"));
+			productService.save(new Product(3L, "Sofa", 100.00, "http://placehold.it/200x100"));
+			productService.save(new Product(4L, "Icecream", 5.00, "http://placehold.it/200x100"));
+			productService.save(new Product(5L, "Beer", 3.00, "http://placehold.it/200x100"));
+			productService.save(new Product(6L, "Phone", 500.00, "http://placehold.it/200x100"));
+			productService.save(new Product(7L, "Watch", 30.00, "http://placehold.it/200x100"));
 		};
 	}
-
-	/*
-	@Bean
-	CommandLineRunner init(UserRepository userRepository) {
-		return args -> {
-			Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
-				User user = new User(name, name.toLowerCase() + "@domain.com");
-				userRepository.save(user);
-			});
-			userRepository.findAll().forEach(System.out::println);
-		};
-	}
-	 */
-
 }
